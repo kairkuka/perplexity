@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+dist/
+coverage/
+*.log
+runtime/.env
+runtime/.cache/
+runtime/screens/
+*.tsbuildinfo
+tmp-calendar-*.png

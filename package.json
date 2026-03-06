@@ -1,0 +1,16 @@
+{
+  "name": "blink-desktop-web-agent",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "shared",
+    "runtime",
+    "web"
+  ],
+  "scripts": {
+    "dev:runtime": "npm -w runtime run dev",
+    "dev:web": "npm -w web run dev",
+    "typecheck": "npm run typecheck --workspaces",
+    "test": "npm -w runtime run test"
+  }
+}

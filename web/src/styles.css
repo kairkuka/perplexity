@@ -1,0 +1,206 @@
+:root {
+  font-family: "SF Pro Text", "Segoe UI", sans-serif;
+  color: #0f172a;
+  background: #f1f5f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #dbe1ea;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.command-bar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.command-input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+button {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.status-bar {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  font-size: 14px;
+}
+
+.status-idle {
+  color: #334155;
+}
+
+.status-running {
+  color: #2563eb;
+}
+
+.status-paused,
+.status-needs-user {
+  color: #b45309;
+}
+
+.status-done {
+  color: #15803d;
+}
+
+.status-error {
+  color: #b91c1c;
+}
+
+.needs-user-banner {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+
+.live-view {
+  min-height: 380px;
+}
+
+.live-frame {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #dbe1ea;
+}
+
+.placeholder {
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  color: #475569;
+}
+
+.step-log {
+  max-height: 460px;
+  overflow: auto;
+}
+
+.step-log ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step-log li {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 8px;
+  padding: 5px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13px;
+}
+
+.log-ts {
+  color: #64748b;
+}
+
+.log-level {
+  font-weight: 600;
+}
+
+.log-error {
+  color: #b91c1c;
+}
+
+.log-warn {
+  color: #b45309;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+.results {
+  display: grid;
+  gap: 8px;
+}
+
+.results h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  display: grid;
+  place-items: center;
+}
+
+.modal-card {
+  width: min(520px, 90vw);
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #dbe1ea;
+  padding: 16px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.danger {
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+@media (max-width: 900px) {
+  .status-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
